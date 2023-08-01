@@ -1,0 +1,44 @@
+N = 400
+curr_v = -1.000000
+curr_v -0.500000
+trials run = 9
+numConsensus = 9
+proportionCons = 1.000000
+curr_v = -0.500000
+curr_v -0.750000
+trials run = 9
+numConsensus = 0
+proportionCons = 0.000000
+curr_v = -0.750000
+curr_v -0.625000
+trials run = 9
+numConsensus = 9
+proportionCons = 1.000000
+curr_v = -0.625000
+curr_v -0.687500
+trials run = 10
+numConsensus = 2
+proportionCons = 0.200000
+curr_v = -0.687500
+curr_v -0.656250
+trials run = 10
+numConsensus = 8
+proportionCons = 0.800000
+curr_v = -0.656250
+curr_v -0.671875
+numConsensus = 24
+proportionCons = 0.750000
+curr_v = -0.671875
+curr_v -0.679688
+trials run = 10
+numConsensus = 8
+proportionCons = 0.800000
+curr_v = -0.679688
+curr_v -0.683594
+trials run = 9
+numConsensus = 8
+proportionCons = 0.888889
+estThresholdDegree = 6.657452
+estThresholdV = -0.683594
+v_arr:[-1.0, -0.5, -0.75, -0.625, -0.6875, -0.65625, -0.671875, -0.6796875, -0.68359375]
+length of v_arr = 9

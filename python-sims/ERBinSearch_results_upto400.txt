@@ -1,0 +1,6 @@
+R squared error:
+0.6342480377490207
+y-intercept:
+[2.02453464]
+slope:
+[0.08126249]
