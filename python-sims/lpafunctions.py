@@ -308,8 +308,8 @@ def plotNumLabelsHeatmap(N, numCommunities, size, numTrials, numLabels_data):
     image = ax.imshow(numLabels_data)
 
     # Show all ticks and label them with the respective list entries
-    ax.set_xticks(np.arange(len(a_arr)), labels=a_arr)
-    ax.set_yticks(np.arange(len(b_arr)), labels=b_arr)
+    ax.set_xticks(np.arange(len(a_arr)))#, labels=a_arr)
+    ax.set_yticks(np.arange(len(b_arr)))#, labels=b_arr)
 
     # Rotate the tick labels and set their alignment.
     plt.setp(ax.get_xticklabels(), rotation=45, ha="right",
@@ -326,7 +326,7 @@ def plotNumLabelsHeatmap(N, numCommunities, size, numTrials, numLabels_data):
     ax.set_ylabel('b where q = N^b')
     fig.tight_layout()
     #plt.show()
-    plt.savefig('numLabels_heatmap_N%d_%dcomm_%dtrials' %(N, numCommunities, numTrials))
+    plt.savefig('numLabels_heatmap_N%d_%dcomm_%dtrials' % (N, numCommunities, numTrials))
     plt.clf()
 
 
@@ -343,8 +343,8 @@ def plotMaxNonzeroHeatmap(N, numCommunities, size, numTrials, maxNonzero_data):
     image = ax.imshow(maxNonzero_data)
 
     # Show all ticks and label them with the respective list entries
-    ax.set_xticks(np.arange(len(a_arr)), labels=a_arr)
-    ax.set_yticks(np.arange(len(b_arr)), labels=b_arr)
+    ax.set_xticks(np.arange(len(a_arr)))#, labels=a_arr)
+    ax.set_yticks(np.arange(len(b_arr)))#, labels=b_arr)
 
     # Rotate the tick labels and set their alignment.
     plt.setp(ax.get_xticklabels(), rotation=45, ha="right",
@@ -376,8 +376,8 @@ def plotFiltNumLabelsHeatmap(N, numCommunities, size, numTrials, numLabels_data)
     image = ax.imshow(numLabels_data)
 
     # Show all ticks and label them with the respective list entries
-    ax.set_xticks(np.arange(len(a_arr)), labels=a_arr)
-    ax.set_yticks(np.arange(len(b_arr)), labels=b_arr)
+    ax.set_xticks(np.arange(len(a_arr)))#, labels=a_arr)
+    ax.set_yticks(np.arange(len(b_arr)))#, labels=b_arr)
 
     # Rotate the tick labels and set their alignment.
     plt.setp(ax.get_xticklabels(), rotation=45, ha="right",
