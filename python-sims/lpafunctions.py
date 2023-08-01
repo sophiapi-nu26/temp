@@ -305,7 +305,7 @@ def plotNumLabelsHeatmap(N, numCommunities, size, numTrials, numLabels_data):
     a_arr = np.linspace(0, -1, num = size)
 
     fig, ax = plt.subplots()
-    image = ax.imshow(numLabels_data)
+    im = ax.imshow(numLabels_data)
 
     # Show all ticks and label them with the respective list entries
     ax.set_xticks(np.arange(len(a_arr)))#, labels=a_arr)
@@ -314,12 +314,15 @@ def plotNumLabelsHeatmap(N, numCommunities, size, numTrials, numLabels_data):
     # Rotate the tick labels and set their alignment.
     plt.setp(ax.get_xticklabels(), rotation=45, ha="right",
             rotation_mode="anchor")
+    
+    # Create colorbar
+    cbar = ax.figure.colorbar(im, ax=ax)
 
     # Loop over data dimensions and create text annotations.
     for i in range(len(b_arr)):
         for j in range(len(a_arr)):
             text = ax.text(i, j, numLabels_data[j, i],
-                        ha="center", va="center", color="w")
+                        fontsize = 4, ha="center", va="center", color="w")
 
     ax.set_title("Average # of Surviving Labels on SBM where \nN = %d on %d Communities Over %d Trials" % (N, numCommunities, numTrials))
     ax.set_xlabel('a where p = N^a')
@@ -340,7 +343,7 @@ def plotMaxNonzeroHeatmap(N, numCommunities, size, numTrials, maxNonzero_data):
     a_arr = np.linspace(0, -1, num = size)
 
     fig, ax = plt.subplots()
-    image = ax.imshow(maxNonzero_data)
+    im = ax.imshow(maxNonzero_data)
 
     # Show all ticks and label them with the respective list entries
     ax.set_xticks(np.arange(len(a_arr)))#, labels=a_arr)
@@ -349,12 +352,15 @@ def plotMaxNonzeroHeatmap(N, numCommunities, size, numTrials, maxNonzero_data):
     # Rotate the tick labels and set their alignment.
     plt.setp(ax.get_xticklabels(), rotation=45, ha="right",
             rotation_mode="anchor")
+    
+    # Create colorbar
+    cbar = ax.figure.colorbar(im, ax=ax)
 
     # Loop over data dimensions and create text annotations.
     for i in range(len(b_arr)):
         for j in range(len(a_arr)):
             text = ax.text(i, j, maxNonzero_data[j, i],
-                        ha="center", va="center", color="w")
+                        fontsize = 4, ha="center", va="center", color="w")
 
     ax.set_title("Average Max Surviving Label on SBM where \nN = %d on %d Communities with %d Trials" % (N, numCommunities, numTrials))
     fig.tight_layout()
@@ -373,21 +379,24 @@ def plotFiltNumLabelsHeatmap(N, numCommunities, size, numTrials, numLabels_data)
     a_arr = np.linspace(0, -1, num = size)
 
     fig, ax = plt.subplots()
-    image = ax.imshow(numLabels_data)
+    im = ax.imshow(numLabels_data)
 
     # Show all ticks and label them with the respective list entries
-    ax.set_xticks(np.arange(len(a_arr)))#, labels=a_arr)
-    ax.set_yticks(np.arange(len(b_arr)))#, labels=b_arr)
+    ax.set_xticks(np.arange(len(a_arr)))#, fontsize = 5)#, labels=a_arr)
+    ax.set_yticks(np.arange(len(b_arr)))#, fontsize = 5)#, labels=b_arr)
 
     # Rotate the tick labels and set their alignment.
     plt.setp(ax.get_xticklabels(), rotation=45, ha="right",
             rotation_mode="anchor")
+    
+    # Create colorbar
+    cbar = ax.figure.colorbar(im, ax=ax)
 
     # Loop over data dimensions and create text annotations.
     for i in range(len(b_arr)):
         for j in range(len(a_arr)):
             text = ax.text(i, j, numLabels_data[j, i],
-                        ha="center", va="center", color="w")
+                        fontsize = 4, ha="center", va="center", color="w")
 
     ax.set_title("Average # of Surviving Labels (Filtered) on SBM where \nN = %d on %d Communities Over %d Trials" % (N, numCommunities, numTrials))
     ax.set_xlabel('a where p = N^a')

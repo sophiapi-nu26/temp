@@ -1,7 +1,7 @@
 from lpafunctions import *
 
-N_values = [200, 400, 800]
-community_values = [(i+1) for i in range(4)]
+N_values = [20]#, 400, 800]
+community_values = [(i+1) for i in range(2)]
 size_values = [33]
 trial_values = [2]
 
